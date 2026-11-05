@@ -135,4 +135,63 @@ git add ollama commands.txt
 git commit -m "Add Python calls"
 git push
 
+(base) jayhu@hushiyideMacBook-Air-2 datasci350-quiz03 % git push 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.30 KiB | 1.30 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+remote: fatal error in commit_refs_rules
+To https://github.com/BobbyShiyi/datasci350-quiz03.git
+ ! [remote rejected] main -> main (fatal error in commit_refs_rules
+)
+error: failed to push some refs to 'https://github.com/BobbyShiyi/datasci350-quiz03.git'
+
+Activity 3
+Task 09 & 10
+
+chmod 400 ~/Downloads/Borrowking.pem
+ssh -i ~/Downloads/Borrowking.pem ubuntu@ec2-3-142-240-222.us-east-2.compute.amazonaws.com
+
+#Output command line: ubuntu@ip-172-31-22-244:~$
+
+Task 11
+
+sudo apt update
+sudo apt install -y python3-pandas python3-matplotlib python3-seaborn
+
+Task 12
+
+#Open a new terminal
+cd ~/datasci350-quiz03
+scp -i ~/Downloads/Borrowking.pem aws/traffic_analysis.py aws/website_traffic.txt ubuntu@ec2-3-142-240-222.us-east-2.compute.amazonaws.com:~
+
+Task 13
+
+python3 traffic_analysis.py > results.txt
+cat /var/lib/cloud/data/instance-id >> results.txt
+sha256sum results.txt > fingerprint.txt
+
+Task 14
+
+#Open a new terminal
+cd ~/datasci350-quiz03
+scp -i ~/Downloads/Borrowking.pem ubuntu@ec2-3-142-240-222.us-east-2.compute.amazonaws.com:~/{results.txt,fingerprint.txt,traffic_analysis.png} aws/
+
+
+Task 15:
+When a EC2 instance is stopped, I no longer pay for instance compute time, but I still pay for attached EBS storage.
+
+exit
+git add .
+git commit -m "Add AWS analysis results"
+git push
+
+AI note:
+I used ChatGPT for help with Tasks 1-15, mainly to explain the quiz instructions, commands, and errors.
+Example prompt: "Help me go through this quiz step by step."
+ChatGPT did not run commands for me; I typed and ran all commands myself.
+
 
