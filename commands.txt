@@ -189,9 +189,16 @@ git add .
 git commit -m "Add AWS analysis results"
 git push
 
-AI note:
-I used ChatGPT for help with Tasks 1-15, mainly to explain the quiz instructions, commands, and errors.
-Example prompt: "Help me go through this quiz step by step."
-ChatGPT did not run commands for me; I typed and ran all commands myself.
+And then terminate the 
+
+AI usage:
+
+I used ChatGPT mainly to check my work, explain unexpected outputs, and confirm that my commands matched the quiz instructions. I typed, ran, and modified the commands and files myself.
+
+Example prompts:
+- "Help me check whether my Modelfile satisfies all three required rules."
+- "Help me check my calculation for the predicted size of granite4:350m."
+- "Why does ask_json.py return finish_reason='stop' instead of failing?"
+- "Help me check whether I am running this SSH/scp command from the correct terminal."
 
 
