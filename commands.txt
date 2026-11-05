@@ -89,7 +89,50 @@ I don't know the current weather in Atlanta right now, so I'm saying on air.
 The model admitted that it did not know the current weather 3 out of 3 times.
 
 Task 06
+
 git add ollama commands.txt
 git commit -m "Add commentator chatbot"
+git push
+
+
+Activity 02, 
+Task 07
+
+Command and output
+(base) jayhu@hushiyideMacBook-Air-2 datasci350-quiz03 % python ollama/ask_local.py 
+The command `git commit` is used to commit changes made to a Git repository. It creates a commit message and adds the changes to the Git history.
+CompletionUsage(completion_tokens=32, prompt_tokens=36, total_tokens=68, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cache_write_tokens=None, cached_tokens=3, image_tokens=None, text_tokens=None))
+(base) jayhu@hushiyideMacBook-Air-2 datasci350-quiz03 % python ollama/ask_local.py
+
+Sports fans, I'm sorry, I don't have enough information to answer that question.
+CompletionUsage(completion_tokens=19, prompt_tokens=110, total_tokens=129, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cache_write_tokens=None, cached_tokens=100, image_tokens=None, text_tokens=None))
+
+
+python ollama/ask_local.py
+# Open ask_local.py and change the model to commentator
+python ollama/ask_local.py
+
+# granite4:350m: prompt_tokens = 36
+# commentator: prompt_tokens=110
+
+The commentator uses more prompt tokens because its SYSTEM instructions and MESSAGE example are added to the prompt context.
+
+Task 08
+
+ollama/ask_json.py
+before:
+zsh: permission denied: ollama/ask_json.py
+
+After change Max_token to 100
+python ollama/ask_json.py 
+{"answer": "I'm sorry, I do not have enough information to answer your question about git commit."}
+stop
+I'm sorry, I do not have enough information to answer your question about git commit.
+
+#Explanation: Because the maximum token was limited to 15, 15 output tokens can truncate the JSON before it is complete. Once it has enough tokens, it will have enough room for Json
+
+git add ollama commands.txt
+git commit -m "Add Python calls"
+git push
 
 
